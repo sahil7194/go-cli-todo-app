@@ -94,7 +94,7 @@ func (todos *Todos) print() {
 		completedAt := ""
 		if t.Completed {
 			completed = "✅"
-			if t.CompletedAt.IsZero() {
+			if !t.CompletedAt.IsZero() {
 				completedAt = t.CompletedAt.Format(time.RFC1123)
 			}
 		}
